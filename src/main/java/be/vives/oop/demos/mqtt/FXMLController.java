@@ -5,7 +5,6 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextArea;
 import be.biosplanet.bioboost.mqtt.simple_mqtt_client.IMQTTMessageHandler;
@@ -28,6 +27,11 @@ public class FXMLController implements Initializable, IMQTTMessageHandler {
     @FXML
     private void handleSubscribe(ActionEvent event) {
       client.subscribe(subscribeTopic.getText(), this);
+    }
+
+    @FXML
+    private void handleUnsubscribe(ActionEvent event) {
+      client.unsubscribe(subscribeTopic.getText());
     }
     
     @Override

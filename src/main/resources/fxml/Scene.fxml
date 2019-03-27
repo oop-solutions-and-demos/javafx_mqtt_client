@@ -62,6 +62,7 @@
                                     </TextField>
                                  </children>
                               </VBox>
+                              <Button layoutX="12.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleUnsubscribe" prefHeight="40.0" prefWidth="155.0" text="Unsubscribe" />
                            </children></AnchorPane>
                   </content>
                 </Tab>
