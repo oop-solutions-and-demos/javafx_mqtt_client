@@ -6,19 +6,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import be.biosplanet.bioboost.mqtt.simple_mqtt_client.SimpleMQTTClient;
 
 public class FXMLController implements Initializable {
     
-    @FXML private Label label;
+    @FXML private TextField publishTopic;
+    @FXML private TextArea message;
     
     private SimpleMQTTClient client = new SimpleMQTTClient();
 
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-        client.publish("test/oop2/hello_world", "Hello World!");
+    private void handlePublish(ActionEvent event) {
+        client.publish(publishTopic.getText(), message.getText());
     }
     
     @Override
