@@ -27,7 +27,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="652.0" layoutY="219.0" mnemonicParsing="false" onAction="#handlePublish" prefHeight="40.0" prefWidth="155.0" text="Publish" />
+                              <Button layoutX="652.0" layoutY="219.0" mnemonicParsing="false" onAction="#handlePublish" prefHeight="40.0" prefWidth="155.0" text="Publish" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="12.0" />
                               <VBox layoutX="14.0" layoutY="14.0" prefHeight="206.0" prefWidth="795.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
                                  <children>
                                     <Label text="Topic:" />
@@ -49,7 +49,20 @@
                 </Tab>
                 <Tab text="Subscribe">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="239.0" prefWidth="819.0" />
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="652.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleSubscribe" prefHeight="40.0" prefWidth="155.0" text="Subscribe" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="12.0" />
+                              <VBox layoutX="14.0" layoutY="14.0" prefHeight="206.0" prefWidth="795.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+                                 <children>
+                                    <Label text="Topic:" />
+                                    <TextField fx:id="subscribeTopic">
+                                       <VBox.margin>
+                                          <Insets left="12.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
                   </content>
                 </Tab>
               </tabs>
